@@ -1,6 +1,5 @@
 import requests
 import traceback
-import datetime
 from config.config import Config
 
 
