@@ -74,7 +74,6 @@ def get_city_weather_forecast(callback_query: types.CallbackQuery):
         lat = x[1]
         for_city = False
 
-
     try:
         if for_city:
             forecast = WeatherAPI.get_weather_forecast_for_city(text)
