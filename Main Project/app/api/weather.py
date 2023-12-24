@@ -14,14 +14,14 @@ class WeatherAPI:
             weather_desc = response['weather'][0]['description'].capitalize()
             curr_temp = response['main']['temp']
             feels_like = response['main']['feels_like']
-            pressure = response['main']['pressure']
+            #pressure = response['main']['pressure']
             humidity = response['main']['humidity']
             wind_speed = response['wind']['speed']
 
             return (f'Погода: {weather_desc}\n' +
                     f'Текущая температура: {curr_temp} °C\n' +
                     f'Ощущается как: {feels_like} °C\n' +
-                    f'Атмосферное давление: {pressure} мм.рт.ст.\n' +
+                    #f'Атмосферное давление: {pressure} мм.рт.ст.\n' +
                     f'Влажность: {humidity} %\n' +
                     f'Скорость ветра: {wind_speed} м/с')
         except KeyError:
