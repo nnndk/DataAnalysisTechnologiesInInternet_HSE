@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns="timetable_namespace"  
+	targetNamespace="timetable_namespace" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	<xs:element name="timetable">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="day" minOccurs="0" maxOccurs="6">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="1" maxOccurs="8" ref="class" />
+						</xs:sequence>
+						<xs:attribute name="name" type="xs:string" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="group" type="xs:string" use="required" />
+			<xs:attribute name="startDate" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="class">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="title" type="xs:string" />
+				<xs:element name="room">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="roomNumber" type="xs:string" />
+							<xs:element name="buildingNumber" type="xs:integer" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="teacher" type="xs:string" />
+			</xs:sequence>
+
+			<xs:attribute name="startTime" type="xs:string" use="required" />
+			<xs:attribute name="endTime" type="xs:string" use="required" />
+			<xs:attribute name="type" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:NMTOKEN">
+						<xs:enumeration value="Lecture" />
+						<xs:enumeration value="Practice" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,15 @@
+<!ELEMENT timetable (day*)>
+    <!ATTLIST timetable group CDATA #REQUIRED
+    startDate CDATA #REQUIRED>
+    <!ELEMENT day (class+)>
+        <!ATTLIST day name CDATA #REQUIRED>
+        <!ELEMENT class (title, room, teacher)>
+            <!ATTLIST class startTime CDATA #REQUIRED
+                endTime CDATA #REQUIRED
+                type (Lecture|Practice) #REQUIRED>
+            <!ELEMENT title (#PCDATA)>
+            <!ELEMENT room (roomNumber, buildingNumber)>
+                <!ELEMENT roomNumber (#PCDATA)>
+                <!ELEMENT buildingNumber (#PCDATA)>
+            <!ELEMENT teacher (#PCDATA)>
+ 

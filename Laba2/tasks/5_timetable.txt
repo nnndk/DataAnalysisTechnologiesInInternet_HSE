@@ -1,0 +1,118 @@
+Timetable
+Monday
+	Start: 9:40
+	End: 11:00
+	Title: Проектирование архитектуры программных систем
+	Teacher: Хаберев Е.А.
+	Type: Lecture
+	Room: 102[3]
+				
+	Start: 11:30
+	End: 12:50
+	Title: Управление программными проектами
+	Teacher: Шестакова Л.В.
+	Type: Practice
+	Room: 510[3]
+				
+	Start: 13:10
+	End: 14:30
+	Title: Научно-исследовательский семинар
+	Teacher: Викентьева О.Л.
+	Type: Practice
+	Room: 510[3]
+				
+
+Tuesday
+	Start: 9:40
+	End: 11:00
+	Title: Технологии и алгоритмы высокопроизводительных вычислений
+	Teacher: Замятина Е.Б.
+	Type: Lecture
+	Room: 102[3]
+				
+	Start: 11:30
+	End: 12:50
+	Title: Технологии и алгоритмы высокопроизводительных вычислений
+	Teacher: Замятина Е.Б.
+	Type: Practice
+	Room: 509[3]
+				
+
+Wednesday
+	Start: 8:10
+	End: 9:30
+	Title: Средства BI для управления процессами и задачами
+	Teacher: Комиссаров К.А.
+	Type: Practice
+	Room: 509[3]
+				
+	Start: 9:40
+	End: 11:00
+	Title: Средства BI для управления процессами и задачами
+	Teacher: Комиссаров К.А.
+	Type: Lecture
+	Room: 102[3]
+				
+
+Thursday
+	Start: 13:10
+	End: 14:30
+	Title: Проектирование архитектуры программных систем
+	Teacher: Банников Р.Ю.
+	Type: Practice
+	Room: 504[3]
+				
+	Start: 15:00
+	End: 16:20
+	Title: Академическое письмо на английском языке
+	Teacher: Туляков Д.С.
+	Type: Practice
+	Room: 501[3]
+				
+
+Friday
+	Start: 11:30
+	End: 12:50
+	Title: Интеллектуальные системы
+	Teacher: Мухин О.И.
+	Type: Lecture
+	Room: дист.[0]
+				
+	Start: 13:10
+	End: 14:30
+	Title: Интеллектуальные системы
+	Teacher: Мухин О.И.
+	Type: Practice
+	Room: дист.[0]
+				
+	Start: 15:00
+	End: 16:20
+	Title: Технологии анализа данных в сети Интернет
+	Teacher: Ланин В.В.
+	Type: Lecture
+	Room: дист.[0]
+				
+	Start: 16:40
+	End: 18:00
+	Title: Технологии анализа данных в сети Интернет
+	Teacher: Ланин В.В.
+	Type: Practice
+	Room: дист.[0]
+				
+
+Saturday
+	Start: 11:30
+	End: 12:50
+	Title: Управление программными проектами
+	Teacher: Климов Б.А.
+	Type: Lecture
+	Room: дист.[0]
+				
+	Start: 13:10
+	End: 14:30
+	Title: Управление программными проектами
+	Teacher: Климов Б.А.
+	Type: Lecture
+	Room: дист.[0]
+				
+

@@ -1,0 +1,9 @@
+https://www.freeformatter.com/xpath-tester.html#before-output
+http://xpather.com/
+a. /timetable/day/class
+b. /timetable/day/class/room[not(roomNumber = following::room/roomNumber and buildingNumber = following::room/buildingNumber)] // только уникальные аудитории (учел, что в разных корпусах могут быть одинаковые номера кабинетов)
+c. /timetable/day/class[@type = "Practice"]
+d. /timetable/day/class[@type = "Lecture"][room/roomNumber = "102"] // Вместо 102 можно подставить любой номер аудитории
+e. distinct-values(/timetable/day/class[@type = "Practice"][room/roomNumber = "509"]/teacher)
+f. /timetable/day/class[last()]
+g. count(/timetable/day/class)

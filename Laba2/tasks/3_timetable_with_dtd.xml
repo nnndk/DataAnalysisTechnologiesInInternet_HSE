@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--https://www.truugo.com/xml_validator/-->
+<!DOCTYPE timetable [
+    <!ELEMENT timetable (day*)>
+    <!ATTLIST timetable group CDATA #REQUIRED
+    startDate CDATA #REQUIRED>
+        <!ELEMENT day (class+)>
+        <!ATTLIST day name CDATA #REQUIRED>
+            <!ELEMENT class (title, room, teacher)>
+                <!ATTLIST class startTime CDATA #REQUIRED
+                    endTime CDATA #REQUIRED
+                    type (Lecture|Practice) #REQUIRED>
+                <!ELEMENT title (#PCDATA)>
+                <!ELEMENT room (roomNumber, buildingNumber)>
+                    <!ELEMENT roomNumber (#PCDATA)>
+                    <!ELEMENT buildingNumber (#PCDATA)>
+                <!ELEMENT teacher (#PCDATA)>
+]>
+<timetable group="ПИ-20-1" startDate="13.11.2023">
+    <day name="Monday">
+        <class startTime="9:40" endTime="11:00" type="Lecture">
+            <title>Проектирование архитектуры программных систем</title>
+            <room>
+                <roomNumber>102</roomNumber>
+                <buildingNumber>3</buildingNumber>
+            </room>
+            <teacher>Хаберев Е.А.</teacher>
+        </class>
+        <class startTime="11:30" endTime="12:50" type="Practice">
+            <title>Управление программными проектами</title>
+            <room>
+                <roomNumber>510</roomNumber>
+                <buildingNumber>3</buildingNumber>
+            </room>
+            <teacher>Шестакова Л.В.</teacher>
+        </class>
+        <class startTime="13:10" endTime="14:30" type="Practice">
+            <title>Научно-исследовательский семинар</title>
+            <room>
+                <roomNumber>510</roomNumber>
+                <buildingNumber>3</buildingNumber>
+            </room>
+            <teacher>Викентьева О.Л.</teacher>
+        </class>
+    </day>
+    <day name="Tuesday">
+            <class startTime="9:40" endTime="11:00" type="Lecture">
+            <title>Технологии и алгоритмы высокопроизводительных вычислений</title>
+            <room>
+                <roomNumber>102</roomNumber>
+                <buildingNumber>3</buildingNumber>
+            </room>
+            <teacher>Замятина Е.Б.</teacher>
+        </class>
+        <class startTime="11:30" endTime="12:50" type="Practice">
+            <title>Технологии и алгоритмы высокопроизводительных вычислений</title>
+            <room>
+                <roomNumber>509</roomNumber>
+                <buildingNumber>3</buildingNumber>
+            </room>
+            <teacher>Замятина Е.Б.</teacher>
+        </class>
+    </day>
+    <day name="Wednesday">
+        <class startTime="8:10" endTime="9:30" type="Practice">
+            <title>Средства BI для управления процессами и задачами</title>
+            <room>
+                <roomNumber>509</roomNumber>
+                <buildingNumber>3</buildingNumber>
+            </room>
+            <teacher>Комиссаров К.А.</teacher>
+        </class>
+        <class startTime="9:40" endTime="11:00" type="Lecture">
+            <title>Средства BI для управления процессами и задачами</title>
+            <room>
+                <roomNumber>102</roomNumber>
+                <buildingNumber>3</buildingNumber>
+            </room>
+            <teacher>Комиссаров К.А.</teacher>
+        </class>
+    </day>
+    <day name="Thursday">
+        <class startTime="13:10" endTime="14:30" type="Practice">
+            <title>Проектирование архитектуры программных систем</title>
+            <room>
+                <roomNumber>504</roomNumber>
+                <buildingNumber>3</buildingNumber>
+            </room>
+            <teacher>Банников Р.Ю.</teacher>
+        </class>
+        <class startTime="15:00" endTime="16:20" type="Practice">
+            <title>Академическое письмо на английском языке</title>
+            <room>
+                <roomNumber>501</roomNumber>
+                <buildingNumber>3</buildingNumber>
+            </room>
+            <teacher>Туляков Д.С.</teacher>
+        </class>
+    </day>
+    <day name="Friday">
+        <class startTime="11:30" endTime="12:50" type="Lecture">
+            <title>Интеллектуальные системы</title>
+            <room>
+                <roomNumber>дист.</roomNumber>
+                <buildingNumber>0</buildingNumber>
+            </room>
+            <teacher>Мухин О.И.</teacher>
+        </class>
+        <class startTime="13:10" endTime="14:30" type="Practice">
+            <title>Интеллектуальные системы</title>
+            <room>
+                <roomNumber>дист.</roomNumber>
+                <buildingNumber>0</buildingNumber>
+            </room>
+            <teacher>Мухин О.И.</teacher>
+        </class>
+        <class startTime="15:00" endTime="16:20" type="Lecture">
+            <title>Технологии анализа данных в сети Интернет</title>
+            <room>
+                <roomNumber>дист.</roomNumber>
+                <buildingNumber>0</buildingNumber>
+            </room>
+            <teacher>Ланин В.В.</teacher>
+        </class>
+        <class startTime="16:40" endTime="18:00" type="Practice">
+            <title>Технологии анализа данных в сети Интернет</title>
+            <room>
+                <roomNumber>дист.</roomNumber>
+                <buildingNumber>0</buildingNumber>
+            </room>
+            <teacher>Ланин В.В.</teacher>
+        </class>
+    </day>
+    <day name="Saturday">
+        <class startTime="11:30" endTime="12:50" type="Lecture">
+            <title>Управление программными проектами</title>
+            <room>
+                <roomNumber>дист.</roomNumber>
+                <buildingNumber>0</buildingNumber>
+            </room>
+            <teacher>Климов Б.А.</teacher>
+        </class>
+        <class startTime="13:10" endTime="14:30" type="Lecture">
+            <title>Управление программными проектами</title>
+            <room>
+                <roomNumber>дист.</roomNumber>
+                <buildingNumber>0</buildingNumber>
+            </room>
+            <teacher>Климов Б.А.</teacher>
+        </class>
+    </day>
+</timetable>

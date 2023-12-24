@@ -1,0 +1,149 @@
+{
+    "timetable": {
+      "group": {
+        "day": [
+          {
+            "class": [
+              {
+                "title": "Проектирование архитекруты программных систем",
+                "room": {
+                  "roomNumber": 102,
+                  "buildingNumber": 3
+                },
+                "teacher": "Хаберев Е.А.",
+                "type": "Lecture"
+              },
+              {
+                "title": "Управление программными проектами",
+                "room": {
+                  "roomNumber": 510,
+                  "buildingNumber": 3
+                },
+                "teacher": "Шестакова Л.В.",
+                "type": "Practice"
+              },
+              {
+                "title": "Научно-исследовательский семинар",
+                "room": {
+                  "roomNumber": 510,
+                  "buildingNumber": 3
+                },
+                "teacher": "Викентьева О.Л.",
+                "type": "Practice"
+              }
+            ]
+          },
+          {
+            "class": [
+              {
+                "title": "Технологии и алгоритмы высокопроизводительных вычислений",
+                "room": {
+                  "roomNumber": 102,
+                  "buildingNumber": 3
+                },
+                "teacher": "Замятина Е.Б.",
+                "type": "Lecture"
+              },
+              {
+                "title": "Технологии и алгоритмы высокопроизводительных вычислений",
+                "room": {
+                  "roomNumber": 509,
+                  "buildingNumber": 3
+                },
+                "teacher": "Замятина Е.Б.",
+                "type": "Practice"
+              }
+            ]
+          },
+          {
+            "class": [
+              {
+                "title": "Средства BI для управления процессами и задачами",
+                "room": {
+                  "roomNumber": 509,
+                  "buildingNumber": 3
+                },
+                "teacher": "Комиссаров К.А.",
+                "type": "Practice"
+              },
+              {
+                "title": "Средства BI для управления процессами и задачами",
+                "room": {
+                  "roomNumber": 102,
+                  "buildingNumber": 3
+                },
+                "teacher": "Комиссаров К.А.",
+                "type": "Lecture"
+              }
+            ]
+          },
+          {
+            "class": [
+              {
+                "title": "Проектирование архитекруты программных систем",
+                "room": {
+                  "roomNumber": 504,
+                  "buildingNumber": 3
+                },
+                "teacher": "Банников Р.Ю.",
+                "type": "Practice"
+              },
+              {
+                "title": "Академическое письмо на английском языке",
+                "room": {
+                  "roomNumber": 501,
+                  "buildingNumber": 3
+                },
+                "teacher": "Туляков Д.С.",
+                "type": "Practice"
+              }
+            ]
+          },
+          {
+            "class": [
+              {
+                "title": "Интеллектуальные системы",
+                "room": "",
+                "teacher": "Мухин О.И.",
+                "type": "Lecture"
+              },
+              {
+                "title": "Интеллектуальные системы",
+                "room": "",
+                "teacher": "Мухин О.И.",
+                "type": "Practice"
+              },
+              {
+                "title": "Технологии анализа данных в сети Интернет",
+                "room": "",
+                "teacher": "Ланин В.В.",
+                "type": "Lecture"
+              },
+              {
+                "title": "Технологии анализа данных в сети Интернет",
+                "room": "",
+                "teacher": "Ланин В.В.",
+                "type": "Practice"
+              }
+            ]
+          },
+          {
+            "class": [
+              {
+                "title": "Управление программными проектами",
+                "room": "",
+                "teacher": "Климов Б.А.",
+                "type": "Lecture"
+              },
+              {
+                "title": "Управление программными проектами",
+                "room": "",
+                "teacher": "Климов Б.А.",
+                "type": "Lecture"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
