@@ -9,10 +9,14 @@ bot = telebot.TeleBot(Config.get_config_item('TELEGRAM', 'TOKEN'))
 
 
 @bot.message_handler(commands=['start'])
-def start_handler(message):
+def cmd_start(message):
+    btn_start = types.KeyboardButton('/start')
+    btn_help = types.KeyboardButton('/help')
     btn_my_geo_weather = types.KeyboardButton(text='Погода рядом со мной', request_location=True)
 
     keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
+    keyboard.add(btn_start)
+    keyboard.add(btn_help)
     keyboard.add(btn_my_geo_weather)
 
     bot.send_message(message.from_user.id, 'Привет! Это бот для получения прогноза погоды. '
@@ -21,7 +25,7 @@ def start_handler(message):
 
 
 @bot.message_handler(commands=['help'])
-def help_handler(message):
+def cmd_help(message):
     bot.send_message(message.from_user.id, 'Введите название города, чтобы узнать погоду в нем')
 
 
