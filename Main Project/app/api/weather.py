@@ -14,14 +14,12 @@ class WeatherAPI:
             weather_desc = response['weather'][0]['description'].capitalize()
             curr_temp = response['main']['temp']
             feels_like = response['main']['feels_like']
-            #pressure = response['main']['pressure']
             humidity = response['main']['humidity']
             wind_speed = response['wind']['speed']
 
             return (f'Погода: {weather_desc}\n' +
                     f'Текущая температура: {curr_temp} °C\n' +
                     f'Ощущается как: {feels_like} °C\n' +
-                    #f'Атмосферное давление: {pressure} мм.рт.ст.\n' +
                     f'Влажность: {humidity} %\n' +
                     f'Скорость ветра: {wind_speed} м/с')
         except KeyError:
@@ -47,27 +45,27 @@ class WeatherAPI:
             return 'Неизвестная ошибка!'
 
     @staticmethod
-    def _get_current_weather_by_url(url: str) -> str:
+    def _get_current_weather_by_url(url: str) -> tuple:
         try:
             response = requests.get(url).json()
-            return WeatherAPI._format_current_weather(response)
+            return WeatherAPI._format_current_weather(response), True
         except requests.exceptions.ConnectionError:
             print(traceback.format_exc())
-            return 'Проблема с доступом к API. Повторите попытку позже!'
+            return 'Проблема с доступом к API. Повторите попытку позже!', False
         except KeyError:
             print(traceback.format_exc())
-            return 'Неправильно введено название города!'
+            return 'Неправильно введено название города!', False
         except Exception:
             print(traceback.format_exc())
-            return 'Неизвестная ошибка!'
+            return 'Неизвестная ошибка!', False
 
     @staticmethod
-    def get_current_weather_for_city(city_name: str) -> str:
+    def get_current_weather_for_city(city_name: str) -> tuple:
         url = WeatherAPI._CURR_WEATHER_BASE_URL_ + f'&q={city_name}&appid={WeatherAPI._API_KEY}'
         return WeatherAPI._get_current_weather_by_url(url)
 
     @staticmethod
-    def get_current_weather_by_coord(lon: str, lat: str) -> str:
+    def get_current_weather_by_coord(lon: str, lat: str) -> tuple:
         url = WeatherAPI._CURR_WEATHER_BASE_URL_ + f'&lon={lon}&lat={lat}&appid={WeatherAPI._API_KEY}'
         return WeatherAPI._get_current_weather_by_url(url)
 

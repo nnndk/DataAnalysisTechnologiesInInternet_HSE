@@ -37,12 +37,17 @@ def location(message):
         lat = user_location.latitude
 
         try:
-            btn_city_weather_forecast = types.InlineKeyboardButton('Получить прогноз погоды',
-                                                                   callback_data=f'{lon}, {lat}')
-            inline_kb = types.InlineKeyboardMarkup().add(btn_city_weather_forecast)
+            result = WeatherAPI.get_current_weather_by_coord(lon, lat)
 
-            bot.send_message(message.from_user.id, WeatherAPI.get_current_weather_by_coord(lon, lat),
-                             reply_markup=inline_kb)
+            if result[1]:
+                btn_city_weather_forecast = types.InlineKeyboardButton('Получить прогноз погоды',
+                                                                       callback_data=f'{lon}, {lat}',
+                                                                       one_time_keyboard=True)
+                inline_kb = types.InlineKeyboardMarkup().add(btn_city_weather_forecast)
+
+                bot.send_message(message.from_user.id, result[0], reply_markup=inline_kb)
+            else:
+                bot.send_message(message.from_user.id, result[0])
         except Exception:
             print(traceback.format_exc())
             return 'Неизвестная ошибка при получении информации из API. Повторите попытку позже!'
@@ -56,11 +61,16 @@ def get_city_weather(message):
         bot.send_message(message.from_user.id, 'Неизвестная команда!')
     else:
         try:
-            btn_city_weather_forecast = types.InlineKeyboardButton('Получить прогноз погоды', callback_data=text)
-            inline_kb = types.InlineKeyboardMarkup().add(btn_city_weather_forecast)
+            result = WeatherAPI.get_current_weather_for_city(text)
 
-            bot.send_message(message.from_user.id, WeatherAPI.get_current_weather_for_city(text),
-                             reply_markup=inline_kb)
+            if result[1]:
+                btn_city_weather_forecast = types.InlineKeyboardButton('Получить прогноз погоды',
+                                                                       callback_data=text)
+                inline_kb = types.InlineKeyboardMarkup().add(btn_city_weather_forecast)
+
+                bot.send_message(message.from_user.id, result[0], reply_markup=inline_kb)
+            else:
+                bot.send_message(message.from_user.id, result[0])
         except Exception:
             print(traceback.format_exc())
             return 'Неизвестная ошибка при получении информации из API. Повторите попытку позже!'
